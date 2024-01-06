@@ -1,6 +1,6 @@
 import { Namespace } from "./namespace";
 import type { Server, RemoteSocket } from "./index";
-import type { EventParams, EventNames, EventsMap, DefaultEventsMap } from "./typed-events";
+import type { EventParams, EventsMap, DefaultEventsMap, EventNamesWithoutAck } from "./typed-events";
 /**
  * A parent namespace is a special {@link Namespace} that holds a list of child namespaces which were created either
  * with a regular expression or with a function.
@@ -24,7 +24,7 @@ export declare class ParentNamespace<ListenEvents extends EventsMap = DefaultEve
      * @private
      */
     _initAdapter(): void;
-    emit<Ev extends EventNames<EmitEvents>>(ev: Ev, ...args: EventParams<EmitEvents, Ev>): boolean;
+    emit<Ev extends EventNamesWithoutAck<EmitEvents>>(ev: Ev, ...args: EventParams<EmitEvents, Ev>): boolean;
     createChild(name: string): Namespace<ListenEvents, EmitEvents, ServerSideEvents, SocketData>;
     fetchSockets(): Promise<RemoteSocket<EmitEvents, SocketData>[]>;
 }
