@@ -21,25 +21,31 @@ messageForm.addEventListener("submit", (e) => {
 });
 
 socket.on("client-total", (data) => {
-  service.innerHTML = data;
+  service.innerHTML = data+" Person Join" ;
 });
 
 function sendMessage() {
-  //console.log(messageInput.value);
 
-  const user = {
-    name: nameInput.value,
-    message: messageInput.value,
-    date: new Date(),
-  };
 
-  fromMysite(user);
-  socket.emit("message", user);
-  const myuser = {
-    name : user.name
+  if(nameInput.value.length==0){
+    alert("Enter Your Name First! ");
   }
-  socket.emit("TypingOff",myuser);
-  messageInput.value="";
+  else{
+    const user = {
+      name: nameInput.value,
+      message: messageInput.value,
+      date: new Date(),
+    };
+  
+    fromMysite(user);
+    socket.emit("message", user);
+    const myuser = {
+      name : user.name
+    }
+    socket.emit("TypingOff",myuser);
+    messageInput.value="";
+  }
+  
 }
 
 socket.on("type-khela", (user) => {
@@ -79,9 +85,11 @@ function fromServer(user) {
 function InnerTyping(user) {
   if (user.lock == 1) {
 
-    feedBack.innerHTML = `${user.Name} is typing`;
-  } else {
-    feedBack.innerHTML = `${user.Name} stop typing`;
+    if(user.Name.length==0)user.Name = "Anonymous"
+    feedBack.innerHTML = `${user.Name} is typing......`;
+  } 
+  else {
+    feedBack.innerHTML = ` `;
   }
 }
 
@@ -93,7 +101,7 @@ function fromMysite(user) {
   child.classList.add("message");
   const dadabhai = document.createElement("span");
 
-  dadabhai.innerText = user.name + " ";
+  dadabhai.innerText ="Me";
   child.appendChild(dadabhai);
   newPart1.appendChild(child);
 
@@ -118,7 +126,7 @@ function checkInpt() {
         socket.emit("Typingbro", myuser);
       }
     } else {
-      //no emit
+   
      
       cnt = 0;
     }

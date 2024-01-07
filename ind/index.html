@@ -13,7 +13,7 @@
     <title>Chat app</title>
   </head>
   <body>
-    <h1 class="title">Arvin Chat 💬</h1>
+    <h1 class="title">JS Chat</h1>
     <div class="main">
       <div class="name">
         <span><i class="far fa-user"></i></span>
@@ -21,8 +21,9 @@
           type="text"
           id="name-input"
           class="name-input"
-          value="anonymous"
+          placeholder="Enter Your Name"
           maxlength="20"
+          
         />
       </div>
 
@@ -34,11 +35,13 @@
       </ul>
 
       <form class="message-form" id="message-form">
+       
         <input
           type="text"
           name="message"
           id="message-input"
           class="message-input"
+          placeholder="message"
         />
         <div class="v-divider"></div>
         <button type="submit" class="send-button">

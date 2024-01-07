@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@600&family=Poppins&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -15,11 +15,12 @@ body {
   align-items: center; */
   display: grid;
   place-items: center;
-  background-color: #ebebeb;
+  background-color: #2f2d2b;
 }
 
 .title {
   margin: 20px 0;
+  font-family: 'Bungee Spice', sans-serif;
 }
 
 .main {
@@ -42,7 +43,7 @@ body {
 }
 
 .name-input {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   color: #7e7e7e;
   flex-grow: 1;
@@ -50,6 +51,8 @@ body {
   margin: 0px 12px;
   outline: none;
   background-color: #ebebeb;
+  border-radius: 10px;
+  font-family: 'Bungee Spice', sans-serif;
 }
 
 .message-container {
@@ -70,19 +73,20 @@ body {
   max-width: 250px;
   font-size: 18px;
   word-wrap: break-word;
+  
 }
 
 .message-left {
   border-radius: 20px 20px 20px 0px;
   align-self: flex-start;
-  background-color: #fff;
+  background-color: #cbb1b1;
   box-shadow: -2px 2px 4px #dcdcdc;
 }
 
 .message-right {
   border-radius: 20px 20px 0px 20px;
   align-self: flex-end;
-  background-color: #2d2d2d;
+  background-color: #6d6a6a;
   box-shadow: 2px 2px 4px #dcdcdc;
   color: #f6f6f6;
 }
@@ -117,6 +121,7 @@ body {
   outline: none;
   padding: 0 12px;
   background-color: #fff;
+  font-family: 'Bungee Spice', sans-serif;
 }
 
 .send-button {
@@ -127,6 +132,15 @@ body {
   outline: none;
   background-color: #fff;
   cursor: pointer;
+  font-family: 'Bungee Spice', sans-serif;
+  
+}
+.send-button:hover{
+   border-style: solid;
+   border-radius: 6px;
+   background-color: #211a1a;
+   transition: 0.1s;
+   
 }
 
 .v-divider {
@@ -138,4 +152,6 @@ body {
 .clients-total {
   margin: 20px 0;
   color: #7e7e7e;
+  font-family: 'Bungee Spice', sans-serif;
+
 }

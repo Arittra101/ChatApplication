@@ -54,6 +54,8 @@ const onConnected = (socket) => {
     };
     socket.broadcast.emit("type-khela", myuser);
   });
+
+  
 };
 
 io.on("connection", onConnected);
