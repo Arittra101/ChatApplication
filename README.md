@@ -1,4 +1,4 @@
-# Chat Application
+# JS Chat
 
 This is a simple chat application built using Node.js, Express.js, Socket.io, HTML, and CSS. It serves as a beginner project to learn and implement key concepts in web development, particularly focusing on Express, Socket.io, and Node.js.
 
@@ -41,15 +41,7 @@ This is a simple chat application built using Node.js, Express.js, Socket.io, HT
 
     The application will be accessible at `http://localhost:3000` by default.
 
-## Usage
 
-1. Open the application in your web browser.
-
-2. Enter your username and join the chat.
-
-3. Start chatting with other users in real-time.
-
-4. The typing indicator will show when someone is typing.
 
 ## Future Improvements
 
@@ -61,6 +53,5 @@ As a beginner project, there are plans for future improvements and learning. Som
 
 - **Refactoring and Code Cleanup:** Continue learning and applying best practices in coding, and refactor the code for better maintainability.
 
-Feel free to contribute, suggest improvements, or use this project as a starting point for your own learning journey!
 
 Happy coding! 😊
